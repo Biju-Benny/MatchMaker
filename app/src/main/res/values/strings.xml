@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MatchMaker</string>
+    <string-array name="location">
+        <item>Select your Location</item>
+        <item>Alappuzha</item>
+        <item>Ernakulam</item>
+        <item>Idukki</item>
+        <item>Kannur</item>
+        <item>Kasaragod</item>
+        <item>Kollam</item>
+        <item>Kottayam</item>
+        <item>Kozhikode</item>
+        <item>Malappuram</item>
+        <item>Palakkad</item>
+        <item>Pathannamthitta</item>
+        <item>Thiruvananthapuram</item>
+        <item>THrissur</item>
+        <item>Wayanad</item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
