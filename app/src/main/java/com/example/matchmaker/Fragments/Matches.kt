@@ -23,6 +23,7 @@ class Matches : Fragment() {
     private lateinit var firestoreDB: FirebaseFirestore
     var usersILike: MutableList<User> = mutableListOf()
     var usersWhoLikeMe: MutableList<User> = mutableListOf()
+    var usersMutualLike: MutableList<User> = mutableListOf()
     private lateinit var adapter: UserAdapterMAtchesOne
     var LikeCat: MutableList<LikeCatagory> = mutableListOf()
 
@@ -72,15 +73,33 @@ class Matches : Fragment() {
             adapter.notifyDataSetChanged()
 
 
+
+            usersMutualLike.clear()
+            for (user in usersILike){
+                for(users in usersWhoLikeMe){
+                    if(user.uid == users.uid){
+                        usersMutualLike.add(user)
+                    }
+                }
+
+            }
+
+
         }
+
+        //usersMutualLike.clear()
+
+
+
 
 
 
         LikeCat.clear()
         LikeCat.add(LikeCatagory("Users You like:",usersILike))
         LikeCat.add(LikeCatagory("Users Who Likes You:",usersWhoLikeMe))
+        LikeCat.add(LikeCatagory("Mutual Likes:",usersMutualLike))
 
-        //Log.i(TAG,"users like list $LikeCat")
+
 
 
 
