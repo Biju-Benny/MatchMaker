@@ -1,6 +1,7 @@
 package com.example.matchmaker.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_matches.view.*
 private val TAG = "Matches"
 
 
-class Matches : Fragment() {
+class Matches : Fragment(), OnClickListnerMatch {
 
     private lateinit var firestoreDB: FirebaseFirestore
     var usersILike: MutableList<User> = mutableListOf()
@@ -26,6 +27,7 @@ class Matches : Fragment() {
     var usersMutualLike: MutableList<User> = mutableListOf()
     private lateinit var adapter: UserAdapterMAtchesOne
     var LikeCat: MutableList<LikeCatagory> = mutableListOf()
+
 
 
 
@@ -87,7 +89,7 @@ class Matches : Fragment() {
 
         }
 
-        //usersMutualLike.clear()
+
 
 
 
@@ -117,7 +119,7 @@ class Matches : Fragment() {
         val layoutManager : RecyclerView.LayoutManager= LinearLayoutManager(activity)
 
         view.rvUsersListScroll!!.layoutManager = layoutManager
-        adapter = UserAdapterMAtchesOne(this, LikeCat!!)
+        adapter = UserAdapterMAtchesOne(this, LikeCat!!,this)
         view.rvUsersListScroll!!.adapter = adapter
 
 
@@ -130,7 +132,18 @@ class Matches : Fragment() {
 
     }
 
+    override fun onListItemClickListnerTwo(position: Int) {    }
 
+    override fun onListItemClickListnerOne(user: User) {
+        val intent = Intent(context,UserDetails::class.java)
+        intent.putExtra("UserId", user.uid)
+        intent.putExtra("FirstName", user.firstName)
+        intent.putExtra("LastName", user.secondName)
+        intent.putExtra("dob",user.dob)
+        intent.putExtra("location",user.location)
+        intent.putExtra("imageUrl",user.profilePicUrl)
+        startActivity(intent)
+    }
 
 
 }

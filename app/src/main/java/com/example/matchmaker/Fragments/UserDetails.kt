@@ -45,7 +45,7 @@ class UserDetails : AppCompatActivity() {
         tvLastName.text = lastNAmeExtra
         tvAgeValue.text = age.toString()
         tvLocationValue.text = locationExtra
-        Glide.with(this).load(ImgUrlExtra).into(profilePic)
+        //Glide.with(this).load(ImgUrlExtra).into(profilePic)
 
         val uidCurrent = FirebaseAuth.getInstance().uid ?: ""
 
