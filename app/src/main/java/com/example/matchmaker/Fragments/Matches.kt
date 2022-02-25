@@ -22,9 +22,9 @@ private val TAG = "Matches"
 class Matches : Fragment(), OnClickListnerMatch {
 
     private lateinit var firestoreDB: FirebaseFirestore
-    var usersILike: MutableList<User> = mutableListOf()
-    var usersWhoLikeMe: MutableList<User> = mutableListOf()
-    var usersMutualLike: MutableList<User> = mutableListOf()
+    private var usersILike: MutableList<User> = mutableListOf()
+    private var usersWhoLikeMe: MutableList<User> = mutableListOf()
+    private var usersMutualLike: MutableList<User> = mutableListOf()
     private lateinit var adapter: UserAdapterMAtchesOne
     var LikeCat: MutableList<LikeCatagory> = mutableListOf()
 
@@ -85,6 +85,7 @@ class Matches : Fragment(), OnClickListnerMatch {
                 }
 
             }
+            adapter.notifyDataSetChanged()
 
 
         }

@@ -27,7 +27,7 @@ class MatchItemAdapter(val fragment: Fragment, private val matchUserList : List<
 
         fun bind(user: User) {
             itemView.matchTvFN!!.text = user.firstName
-            //Glide.with(itemView).load(user.profilePicUrl).into(itemView.matchIV)
+            Glide.with(itemView).load(user.profilePicUrl).into(itemView.matchIV)
         }
 
 
@@ -45,6 +45,7 @@ class MatchItemAdapter(val fragment: Fragment, private val matchUserList : List<
         holder.bind(matchUserList[position])
         holder.itemView.setOnClickListener{
            onClickListnerMatch.onListItemClickListnerOne(matchUserList[position])
+
         }
 
 

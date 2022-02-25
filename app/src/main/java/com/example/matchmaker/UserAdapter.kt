@@ -67,7 +67,7 @@ class UserAdapter(val fragment: Fragment, val users: List<User>, val onListClick
             itemView.tvAgeList.text = age.toString()
             itemView.tvLocationList.text = user.location
 
-            //Glide.with(fragment).load(user.profilePicUrl).into(itemView.listIV)
+            Glide.with(fragment).load(user.profilePicUrl).into(itemView.listIV)
 
 
 

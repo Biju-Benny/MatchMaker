@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#2196F3">
+    android:background="#B707D5">
 
 
     <TextView

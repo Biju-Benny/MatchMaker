@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabTextAppearance="@style/Theme.MatchMaker"
-            android:background="#D1F5F9"
+            android:background="#F097FF"
             app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabGravity="fill"

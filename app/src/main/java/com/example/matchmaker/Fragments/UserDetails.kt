@@ -39,13 +39,13 @@ class UserDetails : AppCompatActivity() {
         val locationExtra:String = intent.getStringExtra("location").toString()
         val ImgUrlExtra:String = intent.getStringExtra("imageUrl").toString()
 
-        val age:Int = AgeClassfn(dobExtra)
+        var age:String = AgeClassfn(dobExtra).toString()
 
         tvFirstName.text = firstNameExtra
         tvLastName.text = lastNAmeExtra
-        tvAgeValue.text = age.toString()
+        tvAgeValue.text = age
         tvLocationValue.text = locationExtra
-        //Glide.with(this).load(ImgUrlExtra).into(profilePic)
+        Glide.with(this).load(ImgUrlExtra).into(profilePic)
 
         val uidCurrent = FirebaseAuth.getInstance().uid ?: ""
 
@@ -68,7 +68,7 @@ class UserDetails : AppCompatActivity() {
 
         likeButton.setOnClickListener{
 
-            val userILike = User(uidExtra, firstNameExtra, lastNAmeExtra, age.toString(), locationExtra , ImgUrlExtra)
+            val userILike = User(uidExtra, firstNameExtra, lastNAmeExtra, dobExtra, locationExtra , ImgUrlExtra)
             db.collection("users").document(uidCurrent).collection("UsersILike").document(uidExtra)
                 .set(userILike)
                 .addOnCompleteListener {

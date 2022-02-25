@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MatchMaker">
         <activity
+            android:name=".MatchUserDetails"
+            android:exported="false" />
+        <activity
             android:name=".MatchUserDetail"
             android:exported="false" />
         <activity

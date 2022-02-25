@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeScreen"
-    android:background="#2196F3">
+    android:background="#B707D5">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="MatchMaker"
-        android:textColor="@color/white"
+        android:textColor="#F097FF"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
