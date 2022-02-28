@@ -8,6 +8,7 @@
     tools:context=".UserInfo"
     android:padding="20dp"
     android:orientation="vertical"
+    android:background="#F3D9F8"
     >
 
     <TextView

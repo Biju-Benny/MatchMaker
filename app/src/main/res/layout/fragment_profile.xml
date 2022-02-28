@@ -4,9 +4,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.Profile"
-    android:background="@color/white">
+    android:background="#F3D9F8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profilePicProfile"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePicProfile"
+            android:text="FirstName"
+            android:id="@+id/tvFirstNameProfile"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvFirstNameProfile"
+            android:id="@+id/tvLastNameProfile"
+            android:text="LastName"
+            android:layout_below="@+id/profilePicProfile"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAgeKeyProfile"
+            android:layout_below="@+id/tvFirstNameProfile"
+            android:text="Age            :"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAgeValueProfile"
+            android:layout_below="@+id/tvFirstNameProfile"
+            android:layout_toEndOf="@+id/tvAgeKeyProfile"
+            android:text="30"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvLocationKeyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAgeKeyProfile"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Location    :"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLocationValueProfile"
+            android:layout_below="@+id/tvAgeKeyProfile"
+            android:layout_toEndOf="@+id/tvLocationKeyProfile"
+            android:text="Kochi"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"/>
+        <Button
+            android:id="@+id/likeButtonProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Edit Profile"
+            android:layout_below="@+id/tvLocationKeyProfile"
+            android:layout_margin="20dp"
+            android:layout_centerInParent="true"
+            />
 
 
-    
-
+    </RelativeLayout>
 </FrameLayout>

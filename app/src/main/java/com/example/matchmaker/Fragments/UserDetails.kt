@@ -25,7 +25,7 @@ import java.util.*
 //private const val TAG = "UserDetails"
 class UserDetails : AppCompatActivity() {
     private lateinit var firestoreDB: FirebaseFirestore
-    lateinit var userCrnt: User
+    private lateinit var userCrnt: User
 
     val db = Firebase.firestore
     @RequiresApi(Build.VERSION_CODES.O)
